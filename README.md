@@ -1,1 +1,1 @@
-# WasteImaging
+# BinBuddy
