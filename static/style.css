@@ -34,17 +34,19 @@ input[type="file"] {
     display: none;
 }
 
-.file-selector {
-    border: 3px solid #c8bdbd;
-    background-color: #ffffff;
-   
-    margin-right: 250px;
+.select, .upload {
+    margin-top: 5%;
     display: inline;
-    padding: 11px 14px;
     font-size: large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     cursor: pointer;
-  
+}
+
+
+.select {
+    padding: 11px 14px;
+    border: 3px solid #c8bdbd;
+    background-color: #ffffff;
 }
 
 
