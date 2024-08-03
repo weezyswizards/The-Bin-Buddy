@@ -14,6 +14,8 @@ body {
 
 h1 {
     color: #333;
+    position: relative;
+    top: 40px;
     font-family: Calistoga;
     font-size: 100px;
     src:url('Calistoga-Regular.ttf');
@@ -28,11 +30,40 @@ button {
     cursor: pointer;
 }
 
+input[type="file"] {
+    display: none;
+}
+
+.file-selector {
+    border: 3px solid #c8bdbd;
+    background-color: #ffffff;
+   
+    margin-right: 250px;
+    display: inline;
+    padding: 11px 14px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+  
+}
+
 
 p {
-    font-size: 25px;
+    font-size: 30px;
+    position: relative;
+    bottom: 20px;
 }
 
 button:hover {
     background-color: #4cae4c;
+    margin-bottom: 40%;
+
+}
+
+#submit {
+    
+    margin-left: 140px;
+    margin-bottom: 20%;
+    font-size: large;
+    
 }
