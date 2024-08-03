@@ -1,5 +1,5 @@
 import tensorflow as tf 
-from tensorflow.kesar.preprocessing import image
+from tensorflow.keras.preprocessing import image
 import numpy as np 
 import os
 from flask import Flask, render_template,url_for
