@@ -1,1 +1,1 @@
-# BinBuddy
+# TheBinBuddy
