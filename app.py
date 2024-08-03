@@ -1,12 +1,23 @@
 from flask import Flask, render_template,url_for
 import tensorflow as tf 
 from tensorflow.keras.preprocessing import image
+from tensorflow.python.keras.layers import Dense
 import h5py as h5
 import numpy as np 
 import os
 
 app = Flask(__name__)
-model = tf.keras.models.load_model('model/waste_model.h5')
+
+if os.path.exists('model\waste_model.h5'):
+    print("Model file exists.")
+    try:
+        model = tf.keras.models.load_model('model\waste_model.h5')
+        print("Model loaded successfully!")
+    except OSError as e:
+        print(f"Error loading model: {e}")
+else:
+    print("Model file does not exist.")
+
 
 @app.route('/')
 def index():
@@ -36,7 +47,7 @@ def predict():
         # Make a prediction using the loaded model
         prediction = model.predict(img_array)
         # Define the class labels
-        classes = ['Garbage', 'Recycling', 'Compost']
+        classes = ['garbage', 'recycling', 'organic']
         # Get the predicted class based on the model's output
         predicted_class = classes[np.argmax(prediction)]
         
