@@ -33,4 +33,4 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=
 """ model.fit(...) """
 
 # Save model
-model.save('model.h5')
+model.save('waste_model.h5')
