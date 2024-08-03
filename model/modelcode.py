@@ -1,9 +1,8 @@
 import tensorflow as tf 
-from tf import keras
+from tensorflow import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.python.keras.layers import Dense
 import h5py as h5
 
 # Creating the model
@@ -33,4 +32,4 @@ validation_generator = validation_datagen.flow_from_directory('./dataset/validat
 model.fit(train_generator, epochs=10, validation_data=validation_generator)
 
 # Save model
-model.save('model\waste_model.h5')
+model.save('model/waste_model.h5')

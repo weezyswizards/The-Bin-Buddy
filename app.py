@@ -8,10 +8,10 @@ import os
 
 app = Flask(__name__)
 
-if os.path.exists('model\waste_model.h5'):
+if os.path.exists('model/waste_model.h5'):
     print("Model file exists.")
     try:
-        model = tf.keras.models.load_model('model\waste_model.h5')
+        model = tf.keras.models.load_model('model/waste_model.h5')
         print("Model loaded successfully!")
     except OSError as e:
         print(f"Error loading model: {e}")
