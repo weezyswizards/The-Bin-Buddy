@@ -1,12 +1,19 @@
-{% extends 'base.html' %}
-
-{% block head %}
-<title> BinBuddy </title>
-<h1> BinBuddy </h1>
-<h4> sorting your waste. </h4>
-{% endblock %}
-
-{% block block %}
-
-
-{% endblock %}
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Declares the language of the document as English -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to make the website responsive -->
+    <title>The Bin Buddy</title> <!-- Sets the title of the webpage -->
+    <link rel="stylesheet" href = "styles.css">
+</head>
+<body>
+    <div class="container"> <!-- Container div to hold the content -->
+        <h1>The Bin Buddy</h1> <!-- Main heading of the webpage -->
+        <p>Upload a picture of your waste to find out how to dispose of it properly.</p> <!-- Paragraph explaining the purpose of the page -->
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data"> <!-- Form for uploading a file, action points to a Flask route -->
+            <input type="file" name="file" accept="image/*" capture="camera" required> <!-- File input field accepting image files, allows capturing from camera, and is required -->
+            <button type="submit">Upload</button> <!-- Submit button to upload the file -->
+        </form>
+    </div>
+</body>
+</html>
