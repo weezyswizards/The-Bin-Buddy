@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #bad7ba;
     margin: 0;
     padding: 0;
 }
@@ -14,15 +14,23 @@ body {
 
 h1 {
     color: #333;
+    font-family: Calistoga;
+    font-size: 100px;
+    src:url('Calistoga-Regular.ttf');
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #5cb85c;
+    padding: 15px 20px;
+    background-color: #5ab55a;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+p {
+    font-size: 25px;
 }
 
 button:hover {
