@@ -7,7 +7,7 @@ import os
 
 app = Flask(__name__)
 
-mapDic = {0 : "Garbage", 1 : "Organic", 2 : "Recycling"}
+mapDic = {0 : "Garbage", 1 : "Compost", 2 : "Recycling"}
 
 model = load_model('model/model.keras')
 

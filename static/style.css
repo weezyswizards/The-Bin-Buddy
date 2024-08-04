@@ -5,6 +5,12 @@ body {
     padding: 0;
 }
 
+.in-file {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -33,6 +39,8 @@ button {
 input[type="file"] {
     display: none;
 }
+
+
 
 .select, .upload {
     margin-top: 5%;
