@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Declares the language of the document as English -->
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Redressed&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to make the website responsive -->
+    <title>The Bin Buddy</title> <!-- Sets the title of the webpage -->
+    <link rel="stylesheet" href = "./static/style.css">
+</head>
+<body>
+    <div class="container"> <!-- Container div to hold the content -->
+        <h1>The Bin Buddy</h1> <!-- Main heading of the webpage -->
+        <p>Upload a picture of your waste to find out how to dispose of it properly.</p> <!-- Paragraph explaining the purpose of the page -->
+        <form action="/result" method="post" enctype="multipart/form-data"> <!-- Form for uploading a file, action points to a Flask route -->
+            <div class="select">
+            <label class="file-selector"> select file
+                <input  type="file" name="file" accept="image/*" capture="camera" required> <!-- File input field accepting image files, allows capturing from camera, and is required -->
+            </label>
+            </div>
+            <div class="upload">
+                <button id="submit" type="submit">Upload</button> <!-- Submit button to upload the file -->
+            </div>
+        </form>
+
+            {% if prediction %}
+            <img src="{{img_path}}" width="400px" height="400px">
+            <h2> This item belongs in the: <i> {{prediction}} </i></h2>
+
+            {% endif %}
+    </div>
+
+
+</body>
+</html>
