@@ -13,10 +13,10 @@
     <div class="container"> <!-- Container div to hold the content -->
         <h1>The Bin Buddy</h1> <!-- Main heading of the webpage -->
         <p>Upload a picture of your waste to find out how to dispose of it properly.</p> <!-- Paragraph explaining the purpose of the page -->
-        <form action="/result" method="post" enctype="multipart/form-data"> <!-- Form for uploading a file, action points to a Flask route -->
+        <form class="input" action="/result" method="post" enctype="multipart/form-data"> <!-- Form for uploading a file, action points to a Flask route -->
             <div class="select">
             <label class="file-selector"> select file
-                <input  type="file" name="file" accept="image/*" capture="camera" required> <!-- File input field accepting image files, allows capturing from camera, and is required -->
+                <input type="file" name="file" required> <!-- File input field accepting image files, allows capturing from camera, and is required -->
             </label>
             </div>
             <div class="upload">
@@ -25,6 +25,8 @@
         </form>
         
             {% if prediction %}
+
+            <img src="{{ url_for('uploaded_file', filename=img_path.split('/')[-1]) }}" class="image"/>
             
             <h2> This item belongs in the: <i> {{prediction}} </i></h2>
 

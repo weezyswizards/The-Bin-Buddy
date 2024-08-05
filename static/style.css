@@ -71,10 +71,17 @@ button:hover {
 }
 
 #submit {
-    
     margin-left: 140px;
     margin-bottom: 20%;
     font-size: large;
     
 }
 
+form.input {
+    height: 100px;
+}
+
+.image {
+    width:200px;
+    height:200px;
+}
